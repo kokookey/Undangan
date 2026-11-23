@@ -288,6 +288,48 @@ body {
     font-size: 0.75rem;
 }
 
+/* --- TOMBOL MUSIK MELAYANG --- */
+.music-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--gold, #D4AF37); /* Warna emas mewah */
+    color: var(--navy-dark, #0B1B3D);       /* Warna ikon biru dongker */
+    border: 2px solid #FFF8E7;              /* Garis pinggir emas terang */
+    border-radius: 50%;                     /* Membuat tombol bulat sempurna */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.45); /* Efek pendar cahaya emas */
+    z-index: 9999;                          /* Memastikan tombol selalu di paling depan */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek saat tombol disentuh kursor */
+.music-btn:hover {
+    transform: scale(1.1);
+    background-color: #e5c158;
+}
+
+/* --- ANIMASI BERPUTAR SAAT MUSIK MENYALA --- */
+@keyframes spinMusic {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Kelas ini otomatis ditambahkan oleh JavaScript saat lagu diputar */
+.music-btn.playing {
+    animation: spinMusic 4s linear infinite;
+}
+
 footer {
     text-align: center;
     padding: 50px 20px;
