@@ -1,0 +1,302 @@
+:root {
+    --warna--background : #0B1B3D;
+    --warna--kartu--elemen: #1E3A6E;
+    --warna--teks--garis: #B76E79;
+    --warna--teks--garis--hover: #db8794;
+    --warna--judul : #D4AF37;
+    --warna--teks : #F0F4F8;
+    --shadow-gelap: 0 10px 30px rgba(4, 10, 24, 0.75);
+    --shadow-gold-glow: 0 4px 20px rgba(212, 175, 55, 0.35);
+    --text-shadow-mewah: 2px 4px 10px rgba(4, 10, 24, 0.8);
+    --batas--bawah : rgba(212, 175, 55, 0.15);
+    --font-judul: 'Cinzel', serif;
+    --font-teks: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-teks);
+    background-color: var(--warna--background);
+    color: var(--warna--teks);
+    overflow-x: hidden;
+}
+
+.cover-content h1 {
+    font-size: 3rem;
+    margin: 15px 0;
+    font-family: var(--font-judul);
+    color: var(--warna--judul);
+}
+
+.cover-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--warna--kartu--elemen), url('background-cover.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--warna--teks--garis);
+    z-index: 9999;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.cover-content {
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal dari atas ke bawah */
+    align-items: center;    /* Mengatur semua elemen agar berada di tengah secara horizontal */
+    justify-content: center;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.cover-content > * {
+    margin-bottom: 15px; /* Memberikan jarak bawah yang konsisten untuk setiap elemen */
+}
+
+.guest-box {
+    padding: 12px 25px;
+    background: var(--warna--kartu--elemen);
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 0 10px 30px var(--shadow-gelap);
+}
+
+.btn-open {
+    background-color: var(--warna--teks--garis); 
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px var(--shadow-gelap);
+}
+
+.btn-open:hover {
+    background-color: var(--warna--teks--garis--hover);
+    transform: translateY(-2px);
+}
+
+/* Kelas untuk menyembunyikan elemen */
+.hidden {
+    display: none;
+}
+
+.cover-slide-up {
+    transform: translateY(-100%); opacity: 0;
+    opacity: 0;
+}
+
+.section { 
+    padding: 70px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid var(--batas--bawah)
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 0.95rem;
+}
+
+/* 1. Countdown */
+.main-title { font-size: 3.5rem; margin: 10px 0; color: var(--warna--judul); }
+.wedding-date { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; }
+
+
+.countdown-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.time-card {
+    background-color: var(--warna--teks--garis);
+    border: 1px solid rgba(71, 13, 13, 0.3);
+    padding: 15px 20px;
+    border-radius: 10px;
+    min-width: 80px;
+    box-shadow: var(--shadow-gelap);
+}
+
+.time-card span {
+    display: block;
+    font-family: var(--font-judul);
+    font-size: 1.8rem;
+    color: var(--warna--judul);
+    font-weight: 700;
+}
+
+/* 2. Mempelai */
+
+
+.couple-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.couple-card { max-width: 280px; }
+
+.couple-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--warna--teks--garis);
+    box-shadow: var(--shadow-gelap);
+    margin-bottom: 15px;
+}
+
+.couple-card h3 {
+    font-family: var(--font-judul);
+    color: var(--warna--judul);
+    margin-bottom: 5px;
+}
+
+.ampersand {
+    font-family: var(--font-judul);
+    font-size: 3rem;
+    color: var(--warna--teks--garis);
+}
+
+/* 3. Detail Acara */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.event-card {
+    background-color: var(--navy-card);
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: var(--shadow-gelap);
+}
+
+.event-card h3 {
+    font-family: var(--font-judul);
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event-time { color: var(--rose-gold); font-weight: 600; margin-bottom: 10px; }
+.event-place { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
+
+.btn-outline {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: var(--gold);
+    color: var(--navy-dark);
+}
+
+/* 4. Galeri */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: var(--shadow-gelap);
+    transition: transform 0.3s;
+}
+
+.gallery-img:hover { transform: scale(1.03); }
+
+/* 5. Form RSVP & Ucapan */
+.rsvp-form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rsvp-form input, .rsvp-form select, .rsvp-form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    background-color: var(--warna--kartu--elemen);
+    color: var(--text-light);
+    font-family: var(--warna--teks);
+}
+
+.wishes-list {
+    max-width: 500px;
+    margin: 30px auto 0;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wish-item {
+    background-color: var(--warna--kartu--elemen);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--warna--judul);
+}
+
+.wish-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.badge {
+    background-color: rgba(212, 175, 55, 0.2);
+    color: var(--warna--judul);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-muted);
+}
+
+footer h3 {
+    font-family: var(--font-judul);
+    color: var(--warna--judul);
+    margin-top: 15px;
+    font-size: 1.8rem;
+}

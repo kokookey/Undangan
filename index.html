@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Hansen & Frieda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="cover" class="cover-container">
+        <div class="cover-content">
+            <p>You are invited to our wedding</p>
+            <h1>Hansen & Frieda</h1>
+            <p>Sabtu, 19 Desember 2026</p>
+            <div id="guest-name" class="guest-box">
+                <p>Kepada Yth. Bpk/Ibu/Saudara/I</p>
+                <h3>Nama Tamu Undangan</h3>
+                <p>di Tempat</p>
+            </div>
+            <button id="open-btn" class="btn-open">Buka Undangan</button>
+        </div>
+    </section>
+
+    <main id="main-content" class="main-content hidden">
+        
+        <section class="section hero-section">
+            <p class="subtitle">You Are Invited To Our Wedding</p>
+            <h1 class="main-title">Hansen & Frieda</h1>
+            <p class="wedding-date">Sabtu, 19 Desember 2026</p>
+            
+            <div class="countdown-box">
+                <div class="time-card"><span id="days">00</span><small>Hari</small></div>
+                <div class="time-card"><span id="hours">00</span><small>Jam</small></div>
+                <div class="time-card"><span id="minutes">00</span><small>Menit</small></div>
+                <div class="time-card"><span id="seconds">00</span><small>Detik</small></div>
+            </div>
+        </section>
+
+        <section class="section couple-section">
+            <h2 class="section-title">Mempelai</h2>
+            <p class="section-desc">Dengan karunia dari Tuhan Yang Maha Esa, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
+            
+            <div class="couple-grid">
+                <div class="couple-card">
+                    <img src="gambar/pria.jpg" alt="Mempelai Pria" class="couple-photo">
+                    <h3>Johansen Ignatius Finnegan, S.Han.</h3>
+                    <p>Putra Pertama dari Bpk. Tigor Finnegan & Ibu Rachel Finnegan</p>
+                </div>
+                <div class="ampersand">&</div>
+                <div class="couple-card">
+                    <img src="gambar/wanita.jpg" alt="Mempelai Wanita" class="couple-photo">
+                    <h3>Mor Frieda Thornhart, S.T.</h3>
+                    <p>Putri Pertama dari Bpk. Freddy Thornhart & Ibu Martha Thornhart</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section event-section">
+            <h2 class="section-title">Rangkaian Acara</h2>
+            <div class="event-grid">
+                <div class="event-card">
+                    <h3>Akad Nikah</h3>
+                    <p class="event-time">08.00 - 10.00 WIB</p>
+                    <p class="event-place">Gereja Katolik Santa Perawan Maria Ratu<br>Jl. Suryo No.62, Kota Jakarta Selatan</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.192852367455!2d106.81201907602258!3d-6.238293693750042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f160842c368f%3A0xaa770b28c82f983e!2sGereja%20Katolik%20Santa%20Perawan%20Maria%20Ratu%2C%20Paroki%20Blok%20Q%2C%20Kebayoran%20Baru!5e0!3m2!1sen!2sid!4v1795406213000!5m2!1sen!2sid" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin target="_blank" class="btn-outline"></iframe>  
+                </div>
+                <div class="event-card">
+                    <h3>Resepsi Pernikahan</h3>
+                    <p class="event-time">11.00 - 17.00 WIB</p>
+                    <p class="event-place">Grand Ballroom - Swissôtel Jakarta PIK Avenue<br>Pantai Indah Kapuk, North Jakarta City</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1576334023466!2d106.73836537602106!3d-6.109467693877021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1d4598be07f7%3A0x73845d862490737f!2sGrand%20Ballroom%20-%20Swiss%C3%B4tel%20Jakarta%20PIK%20Avenue!5e0!3m2!1sen!2sid!4v1795406610906!5m2!1sen!2sid" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Galeri Foto -->
+        <section class="section gallery-section">
+            <h2 class="section-title">Galeri Momen</h2>
+            <div class="gallery-grid">
+                <img src="gambar/gambar 1.jpg" alt="Foto 1" class="gallery-img">
+                <img src="gambar/gambar 2.jpg" alt="Foto 2" class="gallery-img">
+                <img src="gambar/gambar 3.jpg" alt="Foto 3" class="gallery-img">
+                <img src="gambar/gambar 4.jpg" alt="Foto 4" class="gallery-img">
+            </div>
+        </section>
+
+        <!-- 5. RSVP & Doa Ucapan -->
+        <section class="section rsvp-section">
+            <h2 class="section-title">Konfirmasi Kehadiran & Doa</h2>
+            <form id="rsvp-form" class="rsvp-form">
+                <input type="text" id="sender-name" placeholder="Nama Anda" required>
+                <select id="attendance" required>
+                    <option value="">-- Konfirmasi Kehadiran --</option>
+                    <option value="Hadir">Ya, Saya Akan Hadir</option>
+                    <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+                </select>
+                <textarea id="wish-message" rows="4" placeholder="Tuliskan doa dan ucapan untuk kedua mempelai..." required></textarea>
+                <button type="submit" class="btn-open">Kirim Ucapan</button>
+            </form>
+
+            <!-- Daftar Ucapan yang Masuk -->
+            <div id="wishes-list" class="wishes-list">
+                <div class="wish-item">
+                    <div class="wish-header">
+                        <strong>Budi Santoso</strong>
+                        <span class="badge">Hadir</span>
+                    </div>
+                    <p>Selamat menempuh hidup baru Rian & Siska! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+            <h3>Hansen & Frieda</h3>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
