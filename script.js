@@ -1,16 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. LOGIKA BUKA UNDANGAN
     const openBtn = document.getElementById("open-btn");
     const cover = document.getElementById("cover");
     const mainContent = document.getElementById("main-content");
+    
+    // Ambil elemen audio berdasarkan ID
+    const backgroundMusic = document.getElementById("background-music");
 
     openBtn.addEventListener("click", function() {
+        // 1. Tampilkan halaman utama & geser cover ke atas
         mainContent.classList.remove("hidden");
         cover.classList.add("cover-slide-up");
+
+        // 2. PUTAR MUSIK DI SINI
+        backgroundMusic.play().then(() => {
+            console.log("Musik berhasil diputar!");
+        }).catch(error => {
+            console.log("Gagal memutar musik: ", error);
+        });
+
+        // 3. Hilangkan elemen cover dari layar setelah animasi selesai
         setTimeout(() => {
             cover.style.display = "none";
         }, 800);
     });
+});
 
     // 2. LOGIKA COUNTDOWN TIMER
     // Ubah tanggal pernikahan di bawah ini (Format: Month Day, Year HH:MM:SS)
@@ -51,5 +64,4 @@ document.addEventListener("DOMContentLoaded", function() {
             rsvpForm.reset();
         })
         .catch(error => console.error('Error!', error.message));
-});
 });
