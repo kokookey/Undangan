@@ -65,3 +65,25 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error!', error.message));
 });
+
+// Fungsi untuk menyalin nomor rekening ke clipboard
+function copyText(containerId, buttonElement) {
+    const textToCopy = document.getElementById(containerId).innerText;
+    
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        // Ubah teks tombol sementara sebagai tanda berhasil disalin
+        const originalText = buttonElement.innerText;
+        buttonElement.innerText = "Berhasil Disalin! ✓";
+        buttonElement.style.backgroundColor = "#D4AF37";
+        buttonElement.style.color = "#0B1B3D";
+
+        setTimeout(() => {
+            buttonElement.innerText = originalText;
+            buttonElement.style.backgroundColor = "transparent";
+            buttonElement.style.color = "#D4AF37";
+        }, 2000);
+    }).catch(err => {
+        console.error('Gagal menyalin teks: ', err);
+        alert('Gagal menyalin nomor rekening.');
+    });
+}
