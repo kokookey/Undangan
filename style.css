@@ -325,6 +325,62 @@ body {
     }
 }
 
+/* --- STYLE KARTU HADIAH --- */
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.gift-card {
+    background-color: var(--navy-card, #132854);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-gelap, 0 10px 30px rgba(4, 10, 24, 0.75));
+    text-align: center;
+}
+
+.bank-name {
+    font-family: var(--font-judul, 'Cinzel', serif);
+    color: var(--gold, #D4AF37);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.account-number {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light, #F0F4F8);
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.account-holder {
+    font-size: 0.9rem;
+    color: var(--text-muted, #CBD5E1);
+    margin-bottom: 20px;
+}
+
+.btn-copy {
+    background-color: transparent;
+    border: 1px solid var(--gold, #D4AF37);
+    color: var(--gold, #D4AF37);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: var(--font-teks, 'Montserrat', sans-serif);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-copy:hover {
+    background-color: var(--gold, #D4AF37);
+    color: var(--navy-dark, #0B1B3D);
+}
+
 /* Kelas ini otomatis ditambahkan oleh JavaScript saat lagu diputar */
 .music-btn.playing {
     animation: spinMusic 4s linear infinite;
