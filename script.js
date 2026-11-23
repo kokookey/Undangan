@@ -39,30 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // 3. LOGIKA FORM RSVP & DOA UCAPAN
     const rsvpForm = document.getElementById("rsvp-form");
     const wishesList = document.getElementById("wishes-list");
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzRvYvo7LgU5cYt3YutaD-QMwqX6qoQd7xJpxXURMi-0iQBFwReL26sVvCdnIeqVTFM/exec';
 
-    rsvpForm.addEventListener("submit", function(e) {
-        e.preventDefault(); // Mencegah halaman refresh
-
-        const name = document.getElementById("sender-name").value;
-        const attendance = document.getElementById("attendance").value;
-        const message = document.getElementById("wish-message").value;
-
-        // Buat elemen kartu ucapan baru
-        const newWish = document.createElement("div");
-        newWish.classList.add("wish-item");
-        newWish.innerHTML = `
-            <div class="wish-header">
-                <strong>${name}</strong>
-                <span class="badge">${attendance}</span>
-            </div>
-            <p>${message}</p>
-        `;
-
-        // Masukkan ucapan terbaru di paling atas daftar
-        wishesList.prepend(newWish);
-
-        // Kosongkan form setelah dikirim
-        rsvpForm.reset();
-        alert("Terima kasih atas konfirmasi dan doa restu Anda!");
-    });
+    rsvpForm.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // Mengirim data ke Google Sheets
+    fetch(scriptURL, { method: 'POST', body: new FormData(rsvpForm) })
+        .then(response => {
+            alert('Terima kasih! Konfirmasi dan ucapan Anda telah tersimpan.');
+            rsvpForm.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+});
 });
